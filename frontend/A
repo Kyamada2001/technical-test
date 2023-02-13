@@ -15,7 +15,6 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
     <script>
-        console.log('動いている');
         const url = "https://catfact.ninja/fact";
         $("#update-btn").on('click', function() {
             $.ajax({
