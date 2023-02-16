@@ -1,8 +1,10 @@
 <template>
-<div class="list-card">
-    <div v-for="(list, key) in lists" :key="key">
-        <div>{{ list }}</div>
-    </div>
+<div class="item-list-card">
+    <ul>
+        <li v-for="(list, key) in lists" :key="key">
+            {{ list }}
+        </li>
+    </ul>
 </div>
 </template>
 
@@ -11,7 +13,7 @@ import { mapState } from "vuex";
 
 export default {
     computed: mapState({
-            lists: state => state.lists,
+        lists: state => state.lists,
     })
 }
 </script>
