@@ -12,8 +12,8 @@
 import { mapState } from "vuex";
 
 export default {
-    computed: mapState({
-        lists: state => state.lists,
-    })
+    props: {
+        lists: { type: Array, required: true }
+    },
 }
 </script>

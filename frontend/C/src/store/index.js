@@ -5,9 +5,17 @@ const app = createApp({});
 
 export default createStore({
   state: {
-    lists: [
-      'Apple',
+    rightLists: [
+      'Watermelon',
       'Banana',
+      'Peach'
+    ],
+    leftLists: [
+      'Apple',
+      'Grape',
+      'Strawberry',
+      'Cherry',
+      'Plum'
     ]
   },
   mutations: {}

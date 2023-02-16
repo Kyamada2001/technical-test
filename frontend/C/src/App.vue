@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <left-contents/>
-    <right-contents/>
+  <div class="container">
+    <div class="container-inner">
+      <left-contents/>
+      <right-contents/>
+    </div>
   </div>
 </template>
 
