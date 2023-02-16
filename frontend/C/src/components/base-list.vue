@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="list-card">
     <div v-for="(list, key) in lists" :key="key">
         <div>{{ list }}</div>
     </div>
