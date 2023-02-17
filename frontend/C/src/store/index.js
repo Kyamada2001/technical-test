@@ -30,10 +30,10 @@ export default createStore({
     moveRightList(context) {
       let newLeftLists = [...this.state.leftLists];
       let newRightLists = [...this.state.rightLists];
-      const lastList = newLeftLists.pop();
-      newRightLists.push(lastList);
+      const lastLeftList = newLeftLists.pop();
+      newRightLists.push(lastLeftList);
     
-      if(lastList === undefined) return false;
+      if(lastLeftList === undefined) return false;
 
       context.commit('updateLeftLists', {
         leftLists: newLeftLists
@@ -49,11 +49,6 @@ export default createStore({
       newLeftLists.push(lastRightList);
     
       if(lastRightList === undefined) return false;
-
-      console.log(newLeftLists)
-      console.log(newRightLists)
-      console.log(lastRightList)
-
 
       context.commit('updateLeftLists', {
         leftLists: newLeftLists
