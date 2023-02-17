@@ -4,6 +4,7 @@
     border-style: solid;
     display:flex;
     justify-content: center;
+    height: 100%;
 }
 
 .item-list-card ul {
@@ -52,6 +53,7 @@
 
 .container-content {
     width: 300px;
+    height: auto;
 }
 
 .list-under {

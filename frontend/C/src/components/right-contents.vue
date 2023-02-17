@@ -2,7 +2,7 @@
     <div class="container-content">
         <base-list :lists="rightLists"/>
         <div class="list-under">
-        <button class="move-btn" type="button">左へ移動</button>
+        <button v-on:click="moveLeft()" class="move-btn" type="button">左へ移動</button>
         </div>
     </div>
 </template>
@@ -17,7 +17,7 @@ export default {
   }),
   methods: {
     moveLeft() {
-
+        this.$store.dispatch('moveLeftList');
     }
   }
     
