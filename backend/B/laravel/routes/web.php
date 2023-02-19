@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\SubmissionController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/submissions', [SubmissionController::class, 'index'])->name('submission.index');
+
+Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
+Route::post('/user/store', [UserController::class, 'store']);
+Route::get('/user/login', [UserController::class, 'toLoginForm'])->name('user.login');
+Route::post('/user/login', [UserController::class, 'login']);
+// Route::get('/login', [SubmissionController::class, 'index'])->name('submission.index');
