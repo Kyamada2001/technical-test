@@ -23,7 +23,7 @@ services:
     ports:
       - "9001:8000"
     environment:
-      - MYSQL_HOST=db_B
+      - MYSQL_HOST=db_b
       - MYSQL_ROOT_USER=root
       - MYSQL_PORT=3306
       - MYSQL_DATABASE=quiz

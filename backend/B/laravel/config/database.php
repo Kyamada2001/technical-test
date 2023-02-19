@@ -45,11 +45,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('MYSQL_HOST', '127.0.0.1'),
+            'host' => env('MYSQL_HOST', 'db_b'),
             'port' => env('MYSQL_PORT', '3306'),
-            'database' => env('MYSQL_DATABASE', 'forge'),
-            'username' => env('MYSQL_ROOT_USER', 'forge'),
-            'password' => env('MYSQL_ROOT_PASSWORD', ''),
+            'database' => env('MYSQL_DATABASE', 'quiz'),
+            'username' => env('MYSQL_ROOT_USER', 'root'),
+            'password' => env('MYSQL_ROOT_PASSWORD', 'QPCF94l'),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
