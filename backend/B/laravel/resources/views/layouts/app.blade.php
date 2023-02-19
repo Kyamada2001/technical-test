@@ -9,13 +9,20 @@
 <body>
     @if(!empty(Auth::guard('user')->user()))
         <div>{{ Auth::guard('user')->user()->name }}さんログイン中</div>
+
+        <div>
+            <h1>メニュー</h1>
+            <a href="{{ route('submission.index') }}">投稿一覧</a>
+            <a href="{{ route('submission.create') }}">投稿作成</a>
+        </div>
+    @else
+        <div>
+            <h1>メニュー</h1>
+            <a href="{{ route('submission.index') }}">投稿一覧</a>
+            <a href="{{ route('user.login') }}">ログイン</a>
+            <a href="{{ route('user.create') }}">ユーザー登録</a>    
+        </div>
     @endif
-    <div>
-        <h1>メニュー</h1>
-        <a href="{{ route('submission.index') }}">投稿一覧</a>
-        <a href="{{ route('user.login') }}">会員ログイン</a>
-        <a href="{{ route('user.create') }}">会員登録</a>
-    </div>
     <div class="container">
         <div>
             <h1>@yield('title')</h1>

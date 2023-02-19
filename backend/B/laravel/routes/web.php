@@ -18,6 +18,11 @@ Route::get('/submissions', [SubmissionController::class, 'index'])->name('submis
 
 Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
 Route::post('/user/store', [UserController::class, 'store']);
-Route::get('/user/login', [UserController::class, 'toLoginForm'])->name('user.login');
-Route::post('/user/login', [UserController::class, 'login']);
-// Route::get('/login', [SubmissionController::class, 'index'])->name('submission.index');
+
+// ログイン中のみ利用できる
+Route::middleware('auth:user')->group(function() {
+    Route::get('/submission/create', [SubmissionController::class, 'create'])->name('submission.create');
+    Route::post('/submission/store', [SubmissionController::class, 'store']);
+    Route::get('/user/login', [UserController::class, 'toLoginForm'])->name('user.login');
+    Route::post('/user/login', [UserController::class, 'login']);
+});

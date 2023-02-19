@@ -24,8 +24,8 @@ class UserController extends Controller
             'email' => 'required|unique:users|email',
             'password' => 'required|min:5|max:255|confirmed',
         ]);
-        DB::beginTransaction();
         try{
+            DB::beginTransaction();
             $user = new User();
             $attribute = $request->only(['name', 'email', 'password']);
             $user->fill($attribute);

@@ -11,7 +11,8 @@
     <div>
         @forelse($submissions as $submission)
         <div>
-            <p>{{ $submission->text }}</p>
+            <p>投稿者ID: {{ $submission['user_id'] }}</p>
+            <p>{{ $submission['text'] }}</p>
         </div>
         @empty
         <p>投稿がありません。</p>
